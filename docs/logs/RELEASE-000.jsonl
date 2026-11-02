@@ -1,0 +1,8 @@
+{"timestamp":"2026-11-02T10:13:14+00:00","phase":"syntax","command":"python -m compileall -q src","exit_code":0,"result":"PASS","evidence":[]}
+{"timestamp":"2026-11-02T10:13:16+00:00","phase":"unit","command":"python -m unittest discover -s tests -v","exit_code":0,"result":"PASS","evidence":["Ran 21 tests in 1.015s","OK"]}
+{"timestamp":"2026-11-02T10:13:16+00:00","phase":"task-contract","command":"python src/scope_anchor.py check examples/complete-task.md --json","exit_code":0,"result":"PASS","evidence":["status PASS"]}
+{"timestamp":"2026-11-02T10:13:17+00:00","phase":"compile","command":"python src/scope_anchor.py compile examples/complete-task.md","exit_code":0,"result":"PASS","evidence":[]}
+{"timestamp":"2026-11-02T10:13:17+00:00","phase":"git-check","command":"git diff --check","exit_code":0,"result":"PASS","evidence":[]}
+{"timestamp":"2026-11-02T10:13:17+00:00","phase":"git-tree","command":"git status --porcelain","exit_code":0,"result":"PASS","evidence":[]}
+{"timestamp":"2026-11-02T10:13:17+00:00","phase":"static safety scan","command":"source review of network/process/dynamic execution primitives","exit_code":0,"result":"PASS","evidence":{"prohibited_primitives_found":[],"note":"Limited pattern scan; not an independent security audit"}}
+{"timestamp":"2026-11-02T10:13:17+00:00","phase":"publication sanitization","command":"normalized host-specific Python launcher path to python; arguments, outcomes, and recorded test count retained","exit_code":0,"result":"PASS","evidence":[]}
