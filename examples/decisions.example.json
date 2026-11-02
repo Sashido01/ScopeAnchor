@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "decisions": {
+    "runtime.native_first": {
+      "value": "Использовать штатные механизмы платформы, без подмены runtime",
+      "scope": "all"
+    },
+    "git.remote": {
+      "value": "Не делать push/PR/merge без явного запроса",
+      "scope": "all"
+    }
+  }
+}
