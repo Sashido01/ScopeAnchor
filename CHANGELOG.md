@@ -7,7 +7,7 @@
 - Removed personal project context from public documentation and clarified implementation limits and evidence boundaries.
 - Pinned GitHub Actions to verified full commit SHAs and added job timeouts and least-privilege permissions.
 - Preserved both the pre-existing GitHub history and the complete local project history.
-- GitHub-hosted CI and Linux results for this release are recorded only after the workflow actually runs.
+- GitHub-hosted CI passed on Windows and Ubuntu with Python 3.10 and 3.13 (run [41435571456](https://github.com/Sashido01/ScopeAnchor/actions/runs/41435571456), commit `dbc291a1efc1b4c7259fbee00701bb9821d46536`).
 
 ## 0.0.0 — 2026-11-02
 
