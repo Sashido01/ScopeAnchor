@@ -6,7 +6,7 @@ ScopeAnchor is primarily a native Codex Agent Skill. Its optional Python CLI hel
 
 1. Copy `.agents/skills/scope-anchor/` into the target repository's `.agents/skills/` directory. Review an existing destination before replacing or merging it.
 2. Start a Codex conversation in that repository and explicitly request `$scope-anchor` for a multi-step engineering task.
-3. Let the skill audit the request and inspect the repository's own `AGENTS.md`, source, and tests before proposing changes. It checks for repetition, conflicts, missing acceptance criteria, unstated tooling, irrelevant context, and scope expansion.
+3. Let the skill audit the request and inspect the repository's own `AGENTS.md`, source, and tests before proposing changes. It checks for repetition, conflicts, missing acceptance criteria, unstated tooling, irrelevant context, and scope expansion. Its working contract stays concise; the full eleven-field template is reserved for explicit handoffs or CLI use.
 4. Review the scope, acceptance checks, and final evidence. Skill guidance does not override user instructions or host permissions.
 
 Project skill discovery depends on the Codex host and context. Installing files does not change global configuration, and the CLI cannot verify discovery or activation.

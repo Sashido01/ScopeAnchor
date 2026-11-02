@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Kept the skill's working contract concise by default; the full eleven-field template is for explicit handoffs and optional CLI workflows.
+
 ## 0.0.1 — 2026-11-02
 
 - Added complete English and Russian guides. English is canonical; paired translations are updated together.
