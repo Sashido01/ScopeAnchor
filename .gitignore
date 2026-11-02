@@ -10,7 +10,10 @@ htmlcov/
 .scope-anchor/
 *.log
 *.jsonl
-!docs/logs/*.jsonl
+!docs/logs/
+docs/logs/*
+!docs/logs/RELEASE-*.jsonl
+*.bundle
 .DS_Store
 Thumbs.db
 .idea/

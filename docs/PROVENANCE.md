@@ -1,14 +1,7 @@
-# Происхождение и лицензии
+# Provenance and licensing
 
-ScopeAnchor — самостоятельная реализация контракта инженерной задачи для нативного Codex.
+ScopeAnchor is an independent implementation of a structured task contract for native Codex skills.
 
-**Исходное вдохновение**: [Jakeschincariol/promptmaster-skill](https://github.com/Jakeschincariol/promptmaster-skill), MIT. Изучены идея "не повторять одно и то же", список недостатков промптов и фиксация решений. Содержимое исходных `SKILL.md`, `waste-patterns.json`, `decisions.md` и утилит **не перенесено**. Наши контракт, документы, CLI и тесты написаны заново. Attribution дан для прозрачности, не как утверждение об участии автора исходного проекта.
+The project was informed by the general ideas of auditing task prompts and recording decisions in [Jakeschincariol/promptmaster-skill](https://github.com/Jakeschincariol/promptmaster-skill), licensed under MIT. That project targets Claude; ScopeAnchor targets native Codex skills. ScopeAnchor does not copy its source code, skill text, 35-rule catalog, or contradiction-blocking behavior. Its code, documentation, CLI, and tests were written independently. This attribution does not imply endorsement or participation by that author.
 
-Другие источники методологии: официальные публикации OpenAI:
-
-- https://developers.openai.com/blog/skills-agents-sdk
-- https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra
-- https://developers.openai.com/blog/eval-skills
-- https://developers.openai.com/cookbook/examples/codex/iterating-development-workflows-with-codex
-
-Никакие исходники сторонних библиотек в репозиторий не вендорены. Лицензия собственного кода — MIT.
+Methodology references include official OpenAI materials listed in the Russian companion [docs/ru/provenance.md](ru/provenance.md). No third-party library source is vendored. The project license is MIT; see [LICENSE](../LICENSE).

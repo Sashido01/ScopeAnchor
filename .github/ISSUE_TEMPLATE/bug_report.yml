@@ -1,0 +1,33 @@
+name: Bug report
+description: Report a reproducible defect in ScopeAnchor.
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Remove secrets, private task text, and personal data before submitting.
+  - type: input
+    id: version
+    attributes:
+      label: ScopeAnchor version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include OS, Python version (if using the CLI), and Codex surface if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true

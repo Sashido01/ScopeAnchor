@@ -41,6 +41,16 @@ def read_text(path: Path) -> str:
         raise ContractError(f"Cannot read {path}: {exc}") from exc
 
 
+def reject_redirected_path(path: Path) -> None:
+    """Reject symlinked or junction path components before writing user data."""
+    for candidate in (path, *path.parents):
+        if candidate.is_symlink():
+            raise ContractError(f"Symbolic links are not accepted: {candidate}")
+        is_junction = getattr(candidate, "is_junction", None)
+        if callable(is_junction) and is_junction():
+            raise ContractError(f"Junctions are not accepted: {candidate}")
+
+
 def parse_contract(content: str) -> tuple[dict[str, str], list[str]]:
     sections: dict[str, list[str]] = {}
     current: str | None = None
@@ -78,8 +88,7 @@ def load_contract(path: Path) -> tuple[dict[str, str], list[str]]:
 def create_contract(path: Path, title: str, goal: str, project: str) -> None:
     if not path.parent.is_dir():
         raise ContractError(f"Parent directory does not exist: {path.parent}")
-    if path.is_symlink():
-        raise ContractError(f"Symbolic links are not accepted: {path}")
+    reject_redirected_path(path)
     if not goal.strip() or not title.strip():
         raise ContractError("Goal and title must be nonempty")
     safe_title = " ".join(title.split())
@@ -142,9 +151,7 @@ def read_decisions(path: Path) -> dict[str, dict[str, str]]:
 def atomic_save_decisions(path: Path, decisions: dict[str, dict[str, str]]) -> None:
     if path.is_symlink() or path.suffix.lower() != ".json":
         raise ContractError("Decisions must be saved to an explicit nonsymlink .json path")
-    for parent in path.parents:
-        if parent.is_symlink():
-            raise ContractError(f"Symlink parent is not accepted: {parent}")
+    reject_redirected_path(path)
     if not path.parent.exists():
         # Only the explicitly requested decision-file parent is created.
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -272,6 +279,10 @@ def run(args: argparse.Namespace) -> int:
 
 
 def main(argv: list[str] | None = None) -> int:
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, "reconfigure", None)
+        if callable(reconfigure):
+            reconfigure(encoding="utf-8")
     args = parser().parse_args(argv)
     try:
         return run(args)

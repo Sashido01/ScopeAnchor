@@ -2,6 +2,8 @@
 
 No runtime detection or auto-switching. User choice and the **currently usable selected model** win over the table. Model names/availability may change; check the live Codex selector when it matters.
 
+Default recommendation for ordinary multi-step engineering work: **GPT-6 Luna, Medium**. Recommend Low for simple editorial or mechanical changes. Recommend High only when task complexity or the cost of error gives a concrete reason; task length alone is not evidence. These are advisory defaults, not claims about the current selected model or a quota percentage.
+
 | Task | Default advice | Escalate only if |
 |---|---|---|
 | Rename, docs, obvious one-file edit | Luna, Low | Evidence that reasoning is needed |

@@ -1,5 +1,7 @@
-# ScopeAnchor 0.0.0 — archived verification
+# ScopeAnchor 0.0.0 — архивная проверка
 
-This report records an early version-0.0.0 check. The original notes reported Python 3.13.5, Git 2.47.3, and a local Linux-container run with 21 unit tests. These historical claims do not establish results for a later release or a GitHub-hosted runner.
+Этот отчёт фиксирует состояние ранней версии до RELEASE-001 и не является актуальным подтверждением для версии 0.0.1. Текущие проверки и границы доказательств находятся в [docs/ru/testing.md](ru/testing.md) и [docs/en/testing.md](en/testing.md).
 
-Physical Windows/Ubuntu verification, hosted CI, Codex activation behavior, and quota savings were not verified in that initial snapshot.
+В исходной записи от 2026-11-02 заявлены Python 3.13.5, Git 2.47.3 и локальная Linux-контейнерная проверка. Журнал RELEASE-000 отражает запуск 21 теста и проверку примера контракта на том исходном снимке. Эти результаты нельзя переносить на текущий код или считать результатом GitHub-hosted CI.
+
+Тогдашние статусы физической Windows/Ubuntu-системы, GitHub-hosted runners, поведения Codex skill и экономии квоты были `NOT_VERIFIED`. Полная публикация исходников на GitHub тогда ещё не была проверена.

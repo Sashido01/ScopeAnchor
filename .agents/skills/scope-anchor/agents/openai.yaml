@@ -1,4 +1,4 @@
 interface:
   display_name: "ScopeAnchor"
-  short_description: "Одна инженерная задача — доказанный результат"
-  default_prompt: "Используй $scope-anchor: проверь ограничения и выполни эту задачу до приёмки."
+  short_description: "One engineering task, verified to completion"
+  default_prompt: "Use $scope-anchor to scope and complete this task with evidence."
